@@ -1,0 +1,20 @@
+- name: variables to print
+  hosts: web
+  vars: #play level, all plays in this have access to this
+    COURSE: "Devops with AWS"
+    DURATION: "120Hrs"
+    TRAINER: "Sivakumar Reddy"
+  tasks: 
+  - name: print the information
+    ansible.builtin.debug:
+      msg: "Hi, Iam learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
+  
+  - name: print the information again
+    vars:
+      COURSE: ansible #TASK level variables
+    ansible.builtin.debug:
+      msg: "Hi, Iam learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
+  
+  - name: print the information again and again
+    ansible.builtin.debug:
+      msg: "Hi, Iam learning {{COURSE}}, Duration is: {{DURATION}}, Trainer: {{TRAINER}}"
