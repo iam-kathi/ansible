@@ -41,7 +41,7 @@
 
   - name: convert list to map
     vars:
-      cours:
+      course:
       -  { "key": "name", "value": "DevOps with AWS" }
       -  { "key": "duration", "value": "120" }
       -  { "key": "trainer", "value": "sivakumar" }
