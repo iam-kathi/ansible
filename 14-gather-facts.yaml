@@ -4,4 +4,4 @@
   tasks:
   - name: print the facts
     ansible.builtin.debug:
-      msg: "facts are: {{ ansible_facts }}" #here, ansible_facts variable is automatically set by it
+      msg: " {{ ansible_facts }} " #here, ansible_facts variable is automatically set by it
