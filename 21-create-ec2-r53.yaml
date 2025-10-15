@@ -29,7 +29,7 @@
 
   - name: print the output
     ansible.builtin.debug:
-      msg: "{{ec2_instances }}"
+      msg: "{{ ec2_instances }}"
 
   # private IP R53
   - name: create r53 private record
@@ -44,7 +44,7 @@
       overwrite: true
     loop: "{{ ec2_instances.results }}"
 
-  # publice IP R53
+  # public IP R53
   - name: create r53 public record for frontend
     amazon.aws.route53:
       state: present
