@@ -1,3 +1,4 @@
+# checking a number is less than 10 or not
 - name: check a number is less than 10 or not
   hosts: local
   connection: local

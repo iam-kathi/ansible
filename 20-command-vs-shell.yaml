@@ -7,9 +7,9 @@
     # command module, just issues the command
 
   - name : check the process
-    ansible.builtin.shell: ps -ef | grep ssh
+    ansible.builtin.shell: ps -ef | grep ssh # this works as we are using shell for pipes
     register: output
 
   - name : check the process
-    ansible.builtin.command: ps -ef | grep ssh
+    ansible.builtin.command: ps -ef | grep ssh # this won't works as we are using command for pipes
     register: output
